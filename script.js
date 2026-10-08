@@ -26,7 +26,7 @@ const studentNames = [
     "John Doe",
     "LaMelo Ball",
     "Albert Pogi",
-    "TAylor Swift",
+    "Taylor Swift",
     "Sabrina Karpintero"
 ];
 
@@ -54,6 +54,11 @@ function pushStudent(name) {
         addResult.innerHTML = "Please Enter a Student Name!";
         return;
     } 
+
+    if(!isNaN(nameTrim)){
+        addResult.innerHTML = "Please Enter a Name (Strings) Only! "
+        return;
+    }
 
     studentNames.push(nameTrim);
     render();
