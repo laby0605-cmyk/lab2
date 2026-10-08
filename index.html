@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Class Record Manager | Group 3</title>
+
+    <!-- Links CSS and JavaScript -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Page Header -->
+        <header class="site-header">
+            <p class="header-label">CCS114: Web Technologies</p>
+
+            <h1>Class Record Manager</h1>
+
+            <p class="tagline">
+                Keep your class list organized.
+            </p>
+        </header>
+
+        <main>
+
+            <!-- Class List -->
+            <section class="card" id="class-list">
+                <p class="section-label">Class List</p>
+
+                <h2>Who's on the Record?</h2>
+
+                <!-- Shows the number of students -->
+                <p id="studentCount" class="length"></p>
+
+                <!-- Shows the students in the array -->
+                <ul id="studentList" class="student-list"></ul>
+            </section>
+
+
+            <!-- Add Student -->
+            <section class="card" id="add-student">
+                <p class="section-label">Add to the Record</p>
+
+                <h2>Welcome a New Student</h2>
+
+                <p class="description">
+                    Enter a name below to add a student to the class list.
+                </p>
+
+                <div class="form-group">
+                    <label for="studentNameInput" class="sr-only">
+                        Student name
+                    </label>
+
+                    <!-- Input for the student's name -->
+                    <input
+                        type="text"
+                        id="studentNameInput"
+                        placeholder="Type a student's name"
+                        autocomplete="off"
+                    >
+
+                    <!-- Adds a student -->
+                    <button
+                        type="button"
+                        id="btnAdd"
+                        class="btn btn-primary"
+                    >
+                        Add Student
+                    </button>
+                </div>
+
+                <!-- Shows the add result -->
+                <p id="addStudentResult" class="result"></p>
+            </section>
+
+
+            <!-- Remove Last Student -->
+            <section class="card" id="remove-student">
+                <p class="section-label">Edit the Record</p>
+
+                <h2>Remove the Last Entry</h2>
+
+                <p class="description">
+                    Remove the most recent student from the class list.
+                </p>
+
+                <!-- Removes the last student -->
+                <button
+                    type="button"
+                    class="btn btn-danger"
+                    id="btnRemove"
+                >
+                    Remove Last
+                </button>
+
+                <!-- Shows the remove result -->
+                <p id="removeStudentResult" class="result"></p>
+            </section>
+
+
+            <!-- Find Student -->
+            <section class="card" id="find-student">
+                <p class="section-label">Search the Record</p>
+
+                <h2>Find a Student</h2>
+
+                <p class="description">
+                    Enter an index number to find a student in the list.
+                </p>
+
+                <div class="form-group">
+                    <label for="studentIndexInput" class="sr-only">
+                        Student index
+                    </label>
+
+                    <!-- Input for the student's index -->
+                    <input
+                        type="number"
+                        id="studentIndexInput"
+                        placeholder="Enter index number"
+                        step="1"
+                    >
+
+                    <!-- Finds a student -->
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="btnFind"
+                    >
+                        Find Student
+                    </button>
+                </div>
+
+                <p class="note">
+                    Remember: the first item starts at index 0.
+                </p>
+
+                <!-- Shows the find result -->
+                <p id="findStudentResult" class="result"></p>
+            </section>
+
+
+            <!-- Join Students -->
+            <section class="card" id="join-list">
+                <p class="section-label">Connect the List</p>
+
+                <h2>Bring the Names Together</h2>
+
+                <p class="description">
+                    Choose a separator and combine the names into one string.
+                </p>
+
+                <div class="form-group">
+                    <label for="separatorInput" class="sr-only">
+                        Separator
+                    </label>
+
+                    <!-- Input for the separator -->
+                    <input
+                        type="text"
+                        id="separatorInput"
+                        placeholder="Try , or | or -"
+                        autocomplete="off"
+                    >
+
+                    <!-- Joins the students -->
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="btnJoin"
+                    >
+                        Join List
+                    </button>
+                </div>
+
+                <!-- Shows the join result -->
+                <p id="joinListResult" class="result"></p>
+            </section>
+
+
+            <!-- Convert Array to String -->
+            <section class="card" id="to-string">
+                <p class="section-label">View as Text</p>
+
+                <h2>Convert the Record to a String</h2>
+
+                <p class="description">
+                    Convert the array into its default comma-separated string.
+                </p>
+
+                <!-- Converts the array to a string -->
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="btnToString"
+                >
+                    Convert to String
+                </button>
+
+                <!-- Shows the string result -->
+                <p id="stringResult" class="result"></p>
+            </section>
+
+        </main>
+
+        <!-- Page Footer -->
+        <footer class="site-footer">
+            <p>Class Record Manager | CCS114</p>
+            <p>Group 3 — Castillo | David | Madrigal</p>
+        </footer>
+
+    </div>
+    
+</body>
+
+</html>
